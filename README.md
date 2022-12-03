@@ -76,16 +76,16 @@ Both parts: 0.8052029999999999ms
 
 ```
 Day 02
-Time part 1: 2.746ms
-Time part 2: 2.913ms
-Both parts: 5.6592579999999995ms
+Time part 1: 1.442ms
+Time part 2: 1.555ms
+Both parts: 2.997286ms
 ```
 
 ```
 Day 03
-Time part 1: 3.163ms
-Time part 2: 3.816ms
-Both parts: 6.978999ms
+Time part 1: 1.334ms
+Time part 2: 1.565ms
+Both parts: 2.898908ms
 ```
 
 ```
@@ -244,7 +244,7 @@ Both parts: -
 
 ```
 Total stars: 6/50
-Total time: 13.443ms
+Total time: 6.701ms
 ```
 
 <!--/RESULTS-->

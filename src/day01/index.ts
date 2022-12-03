@@ -5,12 +5,12 @@ const parseInput = (rawInput: string) => rawInput;
 
 const solve = (rawInput: string) => {
   // part 1
-  const lines = rawInput.split('\n');
+  const lines = rawInput.split("\n");
   let currentSum = 0;
   let maxSum = 0;
   const maxHeap = new Heap((a: number, b: number) => b - a);
   for (const line of lines) {
-    if (line === '') {
+    if (line === "") {
       if (currentSum > maxSum) {
         maxSum = currentSum;
       }

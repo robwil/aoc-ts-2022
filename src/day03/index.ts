@@ -2,13 +2,13 @@ import run from "aocrunner";
 
 const parseInput = (rawInput: string) => rawInput;
 
-const solve = (rawInput: string) => {
-  // part 1
-  let lines = rawInput.split('\n');
+const part1 = (rawInput: string) => {
+  const input = parseInput(rawInput);
+  let lines = input.split("\n");
   let totalScore = 0;
   for (const line of lines) {
     const charCodes = line
-      .split('')
+      .split("")
       .map((chr) => chr.charCodeAt(0))
       .map((chr) => (chr >= 97 ? chr - 96 : chr - 38));
     const seen = new Map<number, boolean>();
@@ -22,15 +22,17 @@ const solve = (rawInput: string) => {
       }
     }
   }
-  const part1 = totalScore;
+  return totalScore;
+};
 
-  // part 2
-  lines = rawInput.split('\n');
-  totalScore = 0;
+const part2 = (rawInput: string) => {
+  const input = parseInput(rawInput);
+  const lines = input.split("\n");
+  let totalScore = 0;
   let previousLines: number[][] = [];
   for (const line of lines) {
     const charCodes = line
-      .split('')
+      .split("")
       .map((chr) => chr.charCodeAt(0))
       .map((chr) => (chr >= 97 ? chr - 96 : chr - 38));
     previousLines.push(charCodes);
@@ -49,18 +51,7 @@ const solve = (rawInput: string) => {
       previousLines = [];
     }
   }
-  const part2 = totalScore;
-  return { part1, part2 };
-}
-
-const part1 = (rawInput: string) => {
-  const input = parseInput(rawInput);
-  return solve(input).part1;
-};
-
-const part2 = (rawInput: string) => {
-  const input = parseInput(rawInput);
-  return solve(input).part2;
+  return totalScore;
 };
 
 const exampleInput = `
