@@ -71,7 +71,7 @@ yarn start 1
 Day 01
 Time part 1: 0.464ms
 Time part 2: 0.342ms
-Both parts: 0.805206ms
+Both parts: 0.8052079999999999ms
 ```
 
 ```
