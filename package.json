@@ -10,6 +10,9 @@
     "update:readme": "aocrunner update:readme",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "prettier --write"
+  },
   "keywords": [
     "aoc"
   ],
@@ -19,8 +22,9 @@
     "@types/heap": "^0.2.31",
     "@types/node": "^16.11.6",
     "aocrunner": "^1.9.1",
-    "prettier": "^2.8.0",
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.4",
+    "prettier": "^2.8.0"
   },
   "dependencies": {
     "heap": "^0.2.7",
