@@ -12,7 +12,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "prettier --write",
-    ".aocrunner.json": "yarn update:readme"
+    ".aocrunner.json": "yarn update:readme && git add README.md"
   },
   "keywords": [
     "aoc"
