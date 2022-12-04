@@ -22,6 +22,11 @@
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/@types/heap/-/heap-0.2.31.tgz#aaae2b2f7a915810fb783b1bbbf1c0748e399ba9"
   integrity sha512-cKL2veQoMEQGGSib6GTq7Of6mAX1e6gH/7F9ddE4+qsga/RRK/ThAkZcKF/i1yVc30ZxlY2r6vZ74NZNtAA0Yw==
 
+"@types/lodash@^4.14.191":
+  version "4.14.191"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/@types/lodash/-/lodash-4.14.191.tgz#09511e7f7cba275acd8b419ddac8da9a6a79e2fa"
+  integrity sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==
+
 "@types/node@^16.11.6":
   version "16.18.4"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/@types/node/-/node-16.18.4.tgz#712ba61b4caf091fc6490301b1888356638c17bd"
