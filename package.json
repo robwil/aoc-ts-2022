@@ -26,7 +26,8 @@
     "aocrunner": "^1.9.1",
     "husky": "^8.0.0",
     "lint-staged": "^13.0.4",
-    "prettier": "^2.8.0"
+    "prettier": "^2.8.0",
+    "ts-node": "^10.9.1"
   },
   "dependencies": {
     "heap": "^0.2.7",
