@@ -4,11 +4,13 @@ const parseInput = (rawInput: string) => rawInput;
 
 const part1 = (rawInput: string) => {
   const input = parseInput(rawInput);
+  throw new Error("unfinished");
   return;
 };
 
 const part2 = (rawInput: string) => {
   const input = parseInput(rawInput);
+  throw new Error("unfinished");
   return;
 };
 

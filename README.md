@@ -71,63 +71,63 @@ yarn start 1
 Day 01
 Time part 1: 0.422ms
 Time part 2: 0.302ms
-Both parts: 0.7244649999999999ms
+Both parts: 0.724ms
 ```
 
 ```
 Day 02
 Time part 1: 1.287ms
 Time part 2: 1.557ms
-Both parts: 2.844485ms
+Both parts: 2.844ms
 ```
 
 ```
 Day 03
 Time part 1: 1.147ms
 Time part 2: 1.404ms
-Both parts: 2.551596ms
+Both parts: 2.552ms
 ```
 
 ```
 Day 04
 Time part 1: 2.819ms
 Time part 2: 11.915ms
-Both parts: 14.734786ms
+Both parts: 14.735ms
 ```
 
 ```
 Day 05
 Time part 1: 0.978ms
 Time part 2: 1.925ms
-Both parts: 2.902591ms
+Both parts: 2.903ms
 ```
 
 ```
 Day 06
 Time part 1: 0.324ms
 Time part 2: 0.829ms
-Both parts: 1.153152ms
+Both parts: 1.153ms
 ```
 
 ```
 Day 07
 Time part 1: 3.41ms
 Time part 2: 3.206ms
-Both parts: 6.615538ms
+Both parts: 6.616ms
 ```
 
 ```
 Day 08
 Time part 1: 5.204ms
 Time part 2: 4.724ms
-Both parts: 9.927695ms
+Both parts: 9.928ms
 ```
 
 ```
 Day 09
-Time part 1: 8.145ms
+Time part 1: 8.377ms
 Time part 2: -
-Both parts: 8.144565ms
+Both parts: 8.377ms
 ```
 
 ```
@@ -244,7 +244,7 @@ Both parts: -
 
 ```
 Total stars: 17/50
-Total time: 49.599ms
+Total time: 49.832ms
 ```
 
 <!--/RESULTS-->
