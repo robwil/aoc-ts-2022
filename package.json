@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "heap": "^0.2.7",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "mathjs": "^11.5.0"
   },
   "engines": {
     "node": ">=16.13.0"
