@@ -12,11 +12,6 @@ interface DfsIO {
 }
 
 function dfsWithBacktrack(x: number, y: number, io: DfsIO) {
-  let debug = false;
-  // if (io.map[y][x] === 'r') {
-  //   console.log(x, y, io.minSteps[y][x]);
-  //   debug = true;
-  // }
   if (io.minSteps[y][x] <= io.steps + 1) {
     // already explored this path from this number of steps
     return;
@@ -36,7 +31,6 @@ function dfsWithBacktrack(x: number, y: number, io: DfsIO) {
   if (io.map[y][x] === "S") {
     z = "a".charCodeAt(0);
   }
-  // console.log(`\tcurrent elv: ${z}`);
   const neighbors = [
     [x + 1, y],
     [x - 1, y],
@@ -52,9 +46,6 @@ function dfsWithBacktrack(x: number, y: number, io: DfsIO) {
     if (io.map[y2][x2] === "E") {
       z2 = "z".charCodeAt(0);
     }
-    if (debug && io.map[y2][x2] === "s") {
-      console.log(`\t${x2} ${y2} - ${z2} ${io.visited[y2][x2]}`);
-    }
     if (io.visited[y2][x2]) {
       continue;
     }
@@ -64,7 +55,6 @@ function dfsWithBacktrack(x: number, y: number, io: DfsIO) {
       }
     }
   }
-  // console.log(`backtracking at ${x} ${y}`);;
   // unsetting visited here is effectively backtracking
   io.visited[y][x] = false;
   io.steps--;
@@ -91,7 +81,6 @@ const part1 = (rawInput: string) => {
   }
   const io = { map, visited, steps: -1, minSteps, minEndSteps: 1e99 };
   dfsWithBacktrack(startX, startY, io);
-  // console.log(io);
   return io.minEndSteps;
 };
 
@@ -123,12 +112,10 @@ const part2 = (rawInput: string) => {
     };
     const [x, y] = start;
     dfsWithBacktrack(x, y, io);
-    // console.log(x, y, io.minEndSteps);
     if (io.minEndSteps < realMin) {
       realMin = io.minEndSteps;
     }
   }
-  // console.log(io);
   return realMin;
 };
 
