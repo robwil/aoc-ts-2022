@@ -7,6 +7,16 @@
 
 # 🎄 Advent of Code 2022 🎄
 
+## Dev notes
+
+For using debugger, I can run like this:
+
+```
+yarn ts-node --esm src/day01/index.ts
+```
+
+Note this was broken after 1.9.1 of `aocrunner`, I think as part of [this commit](https://github.com/caderek/aocrunner/commit/d8bf126f432bbcf69329a8bdd08e93d44606deaa). So I've pinned to 1.9.1.
+
 ## Solutions
 
 <!--SOLUTIONS-->
@@ -69,86 +79,86 @@ yarn start 1
 
 ```
 Day 01
-Time part 1: 0.422ms
-Time part 2: 0.302ms
-Both parts: 0.724ms
+Time part 1: 0.481ms
+Time part 2: 0.34ms
+Both parts: 0.820525ms
 ```
 
 ```
 Day 02
 Time part 1: 1.287ms
 Time part 2: 1.557ms
-Both parts: 2.844ms
+Both parts: 2.844485ms
 ```
 
 ```
 Day 03
 Time part 1: 1.147ms
 Time part 2: 1.404ms
-Both parts: 2.552ms
+Both parts: 2.551596ms
 ```
 
 ```
 Day 04
 Time part 1: 2.819ms
 Time part 2: 11.915ms
-Both parts: 14.735ms
+Both parts: 14.734786ms
 ```
 
 ```
 Day 05
 Time part 1: 0.978ms
 Time part 2: 1.925ms
-Both parts: 2.903ms
+Both parts: 2.902591ms
 ```
 
 ```
 Day 06
 Time part 1: 0.324ms
 Time part 2: 0.829ms
-Both parts: 1.153ms
+Both parts: 1.153152ms
 ```
 
 ```
 Day 07
 Time part 1: 3.41ms
 Time part 2: 3.206ms
-Both parts: 6.616ms
+Both parts: 6.615538ms
 ```
 
 ```
 Day 08
 Time part 1: 5.204ms
 Time part 2: 4.724ms
-Both parts: 9.928ms
+Both parts: 9.927695ms
 ```
 
 ```
 Day 09
 Time part 1: 8.377ms
 Time part 2: -
-Both parts: 8.377ms
+Both parts: 8.377233ms
 ```
 
 ```
 Day 10
 Time part 1: 0.527ms
 Time part 2: 1.165ms
-Both parts: 1.692ms
+Both parts: 1.6922380000000001ms
 ```
 
 ```
 Day 11
 Time part 1: 0.426ms
 Time part 2: 44.382ms
-Both parts: 44.807ms
+Both parts: 44.807415ms
 ```
 
 ```
 Day 12
 Time part 1: 298.87ms
 Time part 2: 14937.698ms
-Both parts: 15236.567ms
+Both parts: 15236.567385ms
 ```
 
 ```
@@ -244,7 +254,7 @@ Both parts: -
 
 ```
 Total stars: 23/50
-Total time: 15332.899ms
+Total time: 15332.995ms
 ```
 
 <!--/RESULTS-->
