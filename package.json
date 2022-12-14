@@ -30,6 +30,7 @@
     "ts-node": "^10.9.1"
   },
   "dependencies": {
+    "canvas": "^2.10.2",
     "heap": "^0.2.7",
     "lodash": "^4.17.21",
     "mathjs": "^11.5.0"
