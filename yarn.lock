@@ -84,6 +84,13 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.3.tgz#472eaab5f15c1ffdd7f8628bd4c4f753995ec79e"
   integrity sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==
 
+"@types/gifencoder@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@types/gifencoder/-/gifencoder-2.0.1.tgz#96e83022600e85640338ea76daea5327d84870eb"
+  integrity sha512-Ls78JLiLPHA1ytIXMWv/7/71a2Cz7BBnjgi9R/LFcIS531PEFYxPPGHNmBBnLekQ7/VpO+n1fgaJ6XD3ZkpApg==
+  dependencies:
+    "@types/node" "*"
+
 "@types/heap@^0.2.31":
   version "0.2.31"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/@types/heap/-/heap-0.2.31.tgz#aaae2b2f7a915810fb783b1bbbf1c0748e399ba9"
@@ -93,6 +100,11 @@
   version "4.14.191"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/@types/lodash/-/lodash-4.14.191.tgz#09511e7f7cba275acd8b419ddac8da9a6a79e2fa"
   integrity sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==
+
+"@types/node@*":
+  version "18.11.15"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.15.tgz#de0e1fbd2b22b962d45971431e2ae696643d3f5d"
+  integrity sha512-VkhBbVo2+2oozlkdHXLrb3zjsRkpdnaU2bXmX8Wgle3PUi569eLRaHGlgETQHR7lLL1w7GiG3h9SnePhxNDecw==
 
 "@types/node@^16.11.6":
   version "16.18.4"
@@ -249,7 +261,7 @@ braces@^3.0.2, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-canvas@^2.10.2:
+canvas@^2.10.2, canvas@^2.2.0:
   version "2.10.2"
   resolved "https://registry.yarnpkg.com/canvas/-/canvas-2.10.2.tgz#66d827e24acd6c34667453728e13d337417d4b20"
   integrity sha512-FSmlsip0nZ0U4Zcfht0qBJqDhlfGuevTZKE8h+dBOYrJjGvY3iqMGSzzbvkaFhvMXiVxfcMaPHS/kge++T5SKg==
@@ -743,6 +755,13 @@ get-stream@^6.0.1:
   version "6.0.1"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/get-stream/-/get-stream-6.0.1.tgz#a262d8eef67aced57c2852ad6167526a43cbf7b7"
   integrity sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==
+
+gifencoder@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gifencoder/-/gifencoder-2.0.1.tgz#fd363402e506529494757856aa66196697ee6bd4"
+  integrity sha512-x19DcyWY10SkshBpokqFOo/HBht9GB75evRYvaLMbez9p+yB/o+kt0fK9AwW59nFiAMs2UUQsjv1lX/hvu9Ong==
+  dependencies:
+    canvas "^2.2.0"
 
 glob-parent@~5.1.2:
   version "5.1.2"

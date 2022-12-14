@@ -20,6 +20,7 @@
   "author": "Rob Williams",
   "license": "ISC",
   "devDependencies": {
+    "@types/gifencoder": "^2.0.1",
     "@types/heap": "^0.2.31",
     "@types/lodash": "^4.14.191",
     "@types/node": "^16.11.6",
@@ -31,6 +32,7 @@
   },
   "dependencies": {
     "canvas": "^2.10.2",
+    "gifencoder": "^2.0.1",
     "heap": "^0.2.7",
     "lodash": "^4.17.21",
     "mathjs": "^11.5.0"
