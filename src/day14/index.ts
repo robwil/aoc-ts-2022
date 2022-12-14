@@ -4,8 +4,6 @@ import path from "path";
 import fs from "fs";
 import { URL } from "url";
 
-const parseInput = (rawInput: string) => rawInput;
-
 const visualize = (
   rocks: { [key: string]: boolean },
   sands: { [key: string]: boolean },
@@ -82,19 +80,16 @@ const visualize = (
     stringOutput += "\n";
   }
 
-  console.log(stringOutput);
-  console.log(width, height);
+  // console.log(stringOutput);
   const pngStream = canvas.createPNGStream();
   const __dirname = new URL(".", import.meta.url).pathname;
   const outFile = path.join(__dirname, "frame0.png");
-  console.log(outFile);
   const outStream = fs.createWriteStream(outFile);
   pngStream.pipe(outStream);
 };
 
-const part1 = (rawInput: string) => {
-  const input = parseInput(rawInput);
-  const lines = input.split("\n").map((line) => line.split(" -> "));
+const parseInput = (rawInput: string): { [key: string]: boolean } => {
+  const lines = rawInput.split("\n").map((line) => line.split(" -> "));
   const rocks: { [key: string]: boolean } = {};
   for (const line of lines) {
     const points = line.map((point) =>
@@ -105,7 +100,7 @@ const part1 = (rawInput: string) => {
       if (previousPoint !== undefined) {
         if (previousPoint[0] === point[0]) {
           // same x, so move between y
-          for (let y = 0; y < Math.abs(previousPoint[1] - point[1]); y++) {
+          for (let y = 0; y <= Math.abs(previousPoint[1] - point[1]); y++) {
             const rockX = previousPoint[0];
             const rockY =
               previousPoint[1] < point[1]
@@ -115,7 +110,7 @@ const part1 = (rawInput: string) => {
           }
         } else if (previousPoint[1] === point[1]) {
           // same y, so move between x
-          for (let x = 0; x < Math.abs(previousPoint[0] - point[0]); x++) {
+          for (let x = 0; x <= Math.abs(previousPoint[0] - point[0]); x++) {
             const rockX =
               previousPoint[0] < point[0]
                 ? previousPoint[0] + x
@@ -128,22 +123,21 @@ const part1 = (rawInput: string) => {
       previousPoint = point;
     }
   }
-  const lowestRockY = Object.keys(rocks)
-    .map((rock) => rock.split(","))
-    .map((a) => parseInt(a[1], 10))
-    .reduce((prevMax, cur) => (cur > prevMax ? cur : prevMax), 0);
-  // console.log(rocks);
-  // console.log(lowestRockY);
+  return rocks;
+};
+
+const simulateSand = (
+  rocks: { [key: string]: boolean },
+  lowestRockY: number,
+  part2: boolean = false,
+) => {
   const sands: { [key: string]: boolean } = {};
   visualize(rocks, sands);
-  for (let sand = 1; sand < 10000; sand++) {
+  for (let sand = 0; sand < 100000; sand++) {
     let sandX = 500;
     let sandY = 0;
-    if (sand === 317) {
-      visualize(rocks, sands);
-    }
     while (true) {
-      if (sandY > lowestRockY) {
+      if (!part2 && sandY > lowestRockY) {
         // went into abyss, so we are done
         visualize(rocks, sands);
         return sand;
@@ -170,17 +164,44 @@ const part1 = (rawInput: string) => {
         break;
       }
     }
-    // console.log(sandX, sandY);
+    console.log(sandX, sandY, sand);
     // console.log(rocks['521,53']);
     sands[`${sandX},${sandY}`] = true;
+    if (part2 && sandX === 500 && sandY === 0) {
+      visualize(rocks, sands);
+      return sand;
+    }
   }
-  throw new Error("no abyss found");
+};
+
+const part1 = (rawInput: string) => {
+  const rocks = parseInput(rawInput);
+  const lowestRockY = Object.keys(rocks)
+    .map((rock) => rock.split(","))
+    .map((a) => parseInt(a[1], 10))
+    .reduce((prevMax, cur) => (cur > prevMax ? cur : prevMax), 0);
+  return simulateSand(rocks, lowestRockY);
 };
 
 const part2 = (rawInput: string) => {
-  const input = parseInput(rawInput);
-  // throw new Error("unfinished");
-  return;
+  const rocks = parseInput(rawInput);
+  const lowestRockY = Object.keys(rocks)
+    .map((rock) => rock.split(","))
+    .map((a) => parseInt(a[1], 10))
+    .reduce((prevMax, cur) => (cur > prevMax ? cur : prevMax), 0);
+  const minRockX = Object.keys(rocks)
+    .map((rock) => rock.split(","))
+    .map((a) => parseInt(a[0], 10))
+    .reduce((prevMin, cur) => (cur < prevMin ? cur : prevMin), Infinity);
+  const maxRockX = Object.keys(rocks)
+    .map((rock) => rock.split(","))
+    .map((a) => parseInt(a[0], 10))
+    .reduce((prevMax, cur) => (cur > prevMax ? cur : prevMax), 0);
+  // create line at bottom
+  for (let x = minRockX - 1000; x <= maxRockX + 1000; x++) {
+    rocks[`${x},${lowestRockY + 2}`] = true;
+  }
+  return simulateSand(rocks, lowestRockY + 2, true)! + 1;
 };
 
 const exampleInput = `
@@ -202,7 +223,7 @@ run({
     tests: [
       {
         input: exampleInput,
-        expected: "",
+        expected: 93,
       },
     ],
     solution: part2,
